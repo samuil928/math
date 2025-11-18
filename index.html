@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>SuperMath Brain</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Математические библиотеки -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.8.0/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/nerdamer.core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Algebra.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Calculus.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nerdamer/1.1.13/Solve.min.js"></script>
+</head>
+
+<body>
+
+<div class="title">SuperMath</div>
+<div class="subtitle">Мозг: корни, производные, интегралы, solve, матрицы</div>
+
+<div class="card">
+    <input id="expr" placeholder="Примеры: √25, d/dx(x^2), int(0,5; x^2), solve(x^2=4), det([[1,2],[3,4]])">
+
+    <button onclick="calculate()">Посчитать</button>
+
+    <div id="result" class="result"></div>
+
+    <div class="help">
+        <b>Примеры синтаксиса:</b><br><br>
+        Корни: <code>√25</code>, <code>3√27</code>, <code>5√3125</code><br>
+        Производная: <code>d/dx(x^2+3*x)</code><br>
+        Интеграл определённый: <code>int(0,5; x^2)</code><br>
+        Интеграл неопределённый: <code>int(x^2+3*x)</code><br>
+        Уравнение: <code>solve(x^2-4=0)</code><br>
+        Система: <code>solve(x+y=5; x-y=1; x,y)</code><br>
+        Упростить: <code>simplify((x^2+2*x+1)/(x+1))</code><br>
+        Разложить: <code>factor(x^2-1)</code><br>
+        Раскрыть скобки: <code>expand((x+1)^3)</code><br>
+        Матрицы: <code>det([[1,2],[3,4]])</code>, <code>inv([[1,2],[3,4]])</code><br>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
